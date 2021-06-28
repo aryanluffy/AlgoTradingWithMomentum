@@ -114,6 +114,9 @@ int main(){
     for(auto x:returns){
         cout<<x.first<<" "<<x.second<<"\n";
     }
+    for(auto x:maxSimultaneousOppurtunities){
+        cout<<x.first<<" "<<x.second<<"\n";
+    }
     return 0;
 }
 
