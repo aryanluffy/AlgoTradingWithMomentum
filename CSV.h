@@ -5,11 +5,11 @@ using namespace std;
 class CSV{
     public:
     // Assumes first line contains the headers
-    map <string,vector <string>> read_csv(string filePath=""){
+    unordered_map <string,vector <string>> read_csv(string filePath=""){
         auto input=ifstream(filePath);
         string line="";
         vector <string> lines;
-        map <string,vector <string>> dataFrame;
+        unordered_map <string,vector <string>> dataFrame;
         vector <string> headers;
         while(getline(input, line)){
             if(line=="\n")break;
@@ -26,6 +26,7 @@ class CSV{
                 }
                 continue;
             }
+            if(headers.size()!=words.size())continue;
             for(int i=0;i<words.size();i++){
                 dataFrame[headers[i]].push_back(words[i]);
             }

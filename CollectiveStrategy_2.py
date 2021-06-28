@@ -22,10 +22,12 @@ blueChipStocks={'RELIANCE','TATAELXSI','INFY','IGL',
 for index in df.index:
     ticker=df['SYMBOL'][index]
     data=pd.read_csv(dataPath+ticker+'.csv')
+    print(data)
     heiken_ashi=[0,0,0,0]
     for index in data.index:
         if data['Date'][index] not in timeSeriesMap:
             timeSeriesMap[data['Date'][index]]={}
+        # print(data['Date'][index])
         timeSeriesMap[data['Date'][index]][ticker]=[data['Open'][index],
                                                         data['High'][index],
                                                         data['Low'][index],
