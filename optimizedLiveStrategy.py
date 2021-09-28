@@ -14,7 +14,7 @@ import threading
 from OrderPlacer import placeOrder
 
 user = 'aryan'
-passw = 'pcmkcvib'
+passw = 'password'
 host =  '127.0.0.1'  # either localhost or ip e.g. '172.17.0.2' or hostname address 
 port = 3306 
 database = 'trading'
